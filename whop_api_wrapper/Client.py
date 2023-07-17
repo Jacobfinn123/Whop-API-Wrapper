@@ -1,7 +1,7 @@
 import requests
 from typing import List
-from Objects import Product, Plan, Membership, Company, Payment, CheckoutSession, Customer, PromoCode
-from Endpoints import Endpoints
+from .Objects import Product, Plan, Membership, Company, Payment, CheckoutSession, Customer, PromoCode
+from .Endpoints import Endpoints
 
 
 # TODO: Expand does nothing ATM (has different options for each object)
@@ -12,17 +12,17 @@ class Client:
 		token: str,
 		api_version: str = "v2"
 	):
-		self.token = token.replace("Bearer ", "")
-		self.headers = {"accept": "application/json", "Authorization": f"Bearer {token}"}
-		self.base_url = "https://api.whop.com/api/"
-		self.api_version = api_version
+		self._token = token.replace("Bearer ", "")
+		self._headers = {"accept": "application/json", "Authorization": f"Bearer {token}"}
+		self._base_url = "https://api.whop.com/api/"
+		self._api_version = api_version
 
 		# Test token
 		self._test_token()
 
 	def _test_token(self):
-		url = f"{self.base_url}{self.api_version}"
-		response = requests.get(url, headers=self.headers)
+		url = f"{self._base_url}{self._api_version}"
+		response = requests.get(url, headers=self._headers)
 		status_code = response.status_code
 
 		if status_code == 401:
@@ -35,9 +35,9 @@ class Client:
 		**kwargs
 	) -> dict:
 
-		url = f"{self.base_url}{self.api_version}{endpoint}"
+		url = f"{self._base_url}{self._api_version}{endpoint}"
 		# Ensures at least authentication is being sent
-		headers = kwargs.get('headers') or self.headers
+		headers = kwargs.get('headers') or self._headers
 		kwargs['headers'] = headers
 		response = request_method(url, **kwargs)
 
