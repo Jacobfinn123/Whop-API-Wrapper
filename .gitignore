@@ -2,11 +2,14 @@
 dist/whop-api-wrapper-1.0.0.tar.gz
 .idea/vcs.xml
 dist/whop_api_wrapper-1.0.0-py3-none-any.whl
-.idea/vcs.xml
 *.xml
 whop_api_wrapper.egg-info/PKG-INFO
 whop_api_wrapper.egg-info/SOURCES.txt
 whop_api_wrapper.egg-info/top_level.txt
 whop_api_wrapper.egg-info/dependency_links.txt
 whop_api_wrapper.egg-info/requires.txt
-.idea/vcs.xml
+*.whl
+*.gz
+*.pyc
+token.txt
+Resources/__pycache__/Client.cpython-310.pyc
