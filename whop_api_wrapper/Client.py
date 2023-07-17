@@ -1,7 +1,7 @@
 import requests
 from typing import List
-from Resources.Objects import Product, Plan, Membership, Company, Payment, CheckoutSession, Customer, PromoCode
-from Resources.Endpoints import Endpoints
+from Objects import Product, Plan, Membership, Company, Payment, CheckoutSession, Customer, PromoCode
+from Endpoints import Endpoints
 
 
 # TODO: Expand does nothing ATM (has different options for each object)
@@ -473,4 +473,3 @@ class Client:
 		response_json = self._make_request(Endpoints.PROMO_CODES + promo_code_id, request_method=requests.delete, params=params)
 		return PromoCode(response_json)
 	# < --------- PROMO CODES ---------- >
-

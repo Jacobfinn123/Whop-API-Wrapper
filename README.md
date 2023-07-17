@@ -7,14 +7,14 @@ A simple python API wrapper of Whop's API, documentation can be found at: https:
 To install the package, use the following command:
 
 ```shell
-pip install whop-api-wrapper
+pip install whop_api_wrapper
 ```
 
 ## Usage
 Initialize the Client class with your token, use any api call as a method of the client.
 
 ```py
-from Resources.Client import Client
+from whop_api_wrapper import Client
 
 client = Client("input_token_here")
 

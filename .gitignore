@@ -12,4 +12,5 @@ whop_api_wrapper.egg-info/requires.txt
 *.gz
 *.pyc
 token.txt
-Resources/__pycache__/Client.cpython-310.pyc
+whop_api_wrapper/__pycache__/Client.cpython-310.pyc
+*.pyc
