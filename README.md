@@ -7,7 +7,7 @@ A simple python API wrapper of Whop's API, documentation can be found at: https:
 To install the package, use the following command:
 
 ```shell
-pip install whop_api_wrapper
+pip install whop-api-wrapper
 ```
 
 ## Usage
