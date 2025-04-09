@@ -89,7 +89,6 @@ class Membership(BaseObject):
 		self.affiliate_page_url = json_data['affiliate_page_url']
 		self.checkout_session = json_data['checkout_session']
 		self.access_pass = json_data['access_pass']
-		self.deliveries = json_data['deliveries']
 		self.telegram_account_id = json_data['telegram_account_id']
 
 
